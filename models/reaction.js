@@ -1,5 +1,5 @@
 const { Schema, model, Types } = require("mongoose");
-
+const timeStamp = require("../utils/timeStamp");
 const reactionSchema = new Schema(
   {
     reactionId: {
@@ -18,6 +18,7 @@ const reactionSchema = new Schema(
     createdAt: {
       type: Date,
       default: Date.now,
+      get: (time) => timeStamp(time),
     },
   },
   {
@@ -28,5 +29,5 @@ const reactionSchema = new Schema(
   }
 );
 
-const Reaction = model("Reaction", reactionSchema); // create a model with the schema and export it
-module.exports = Reaction;
+// // create a model with the schema and export it
+module.exports = reactionSchema;
