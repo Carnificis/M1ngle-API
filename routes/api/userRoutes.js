@@ -7,7 +7,6 @@ const {
   deleteUser,
 } = require("../../controllers/userController.js");
 
-// /api/courses
 router.route("/").get(getUsers).post(createUser);
 
 

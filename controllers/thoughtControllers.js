@@ -1,13 +1,13 @@
 const { Reaction, User, Thought } = require('../models');
 
 module.exports = {
-  // Get all courses
+  
   getThoughts(req, res) {
     Thought.find()
       .then((thoughts) => res.json(thoughts))
       .catch((err) => res.status(500).json(err));
   },
-  // Get a course
+  
   getSingleThought(req, res) {
     Thought.findOne({ _id: req.params.thoughtId })
       .select('-__v')

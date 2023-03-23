@@ -4,21 +4,25 @@ const {
   getSingleThought,
   createThought,
   deleteThought,
+  updateThought
 //   addReaction,
 //   removeReaction,
 } = require("../../controllers/thoughtControllers");
 
-// /api/students
+
 router.route("/").get(getThoughts).post(createThought);
 
-// /api/students/:studentId
-router.route("/:thoughtId").get(getSingleThought).delete(deleteThought);
 
-// /api/students/:studentId/assignments
+router.route("/:thoughtId")
+  .get(getSingleThought)
+  .delete(deleteThought)
+  .put(updateThought);
+
+
 router.route("/:thoughtId/assignments")
     //.post(addReaction);
 
-// /api/students/:studentId/assignments/:assignmentId
+
 router.route("/:thoughtId/reaction/:reactionId")
     //.delete(removeReaction);
 
