@@ -5,6 +5,6 @@ My social network API using NoSQL
 Jack Kelly
 
 ### Links
-[Repository]()
-[Video]()
+[Repository](https://github.com/Carnificis/M1ngle-API)
+[Video](https://drive.google.com/file/d/1knuyrVzuljorEbzJZEvDjdY0zF-s9GtT/view)
 
